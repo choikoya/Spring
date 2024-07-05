@@ -1,0 +1,28 @@
+package edu.pnu.controller;
+
+import java.util.List;
+
+import org.springframework.web.bind.annotation.GetMapping;
+
+import edu.pnu.domain.MemberVO;
+import edu.pnu.service.MemberService;
+
+public class MemberController {
+	
+	private MemberService memberService;
+	
+	public MemberController() { //생성자만듦
+	
+	memberService = new MemberService();
+	
+	
+
+}
+	
+	//검색(Read - select)
+	
+		@GetMapping("/members")
+		public List<MemberVO> getAllMember(){ //보통 ResponseEntitiy<?> 많이사용
+			return memberService.getAllMember(); //ResponseEntitiy.ok(memberService.getAllMember());
+		}
+}
