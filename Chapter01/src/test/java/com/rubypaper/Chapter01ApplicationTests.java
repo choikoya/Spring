@@ -8,6 +8,12 @@ class Chapter01ApplicationTests {
 
 	@Test
 	void contextLoads() {
+		System.out.println("test1");
+	}
+	
+	@Test
+	void contextLoads2() {
+		System.out.println("test2");
 	}
 
 }
